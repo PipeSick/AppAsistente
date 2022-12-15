@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:AppAsistente.Views.AccessView"
+             x:Class="AppAsistente.Views.AccessView.LoginPage">
+    <ContentPage.Content>
+        <StackLayout x:Name="MainStak">
+            <StackLayout Padding="20" Margin="0,80,0,0" >
+                <Label Text="Inicio de sesión" TextColor="Black" HorizontalTextAlignment="Start" FontSize="Title"></Label>
+            </StackLayout>
+            <StackLayout Padding="20" Margin="0, 20, 0, 0">
+                <Label Text="Correo" TextColor="Red"></Label>
+                <Entry Placeholder="Ingrese Correo"
+                       Text="{Binding EmailTxt, Mode = TwoWay}"
+                       />
+                <Grid Margin="0,15,0,0">
+                    <Label Text="Contraseña"  TextColor="Red">
+                    </Label>
+                    <Entry Placeholder="Ingrese Contraseña" Margin="0,20,0,0"
+                           Text="{Binding PasswordTxt, Mode= TwoWay}" 
+                           IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger},Path=EsconderContraseña}"
+                           />
+                    <ImageButton VerticalOptions="Center" Margin="0,0,10,0"
+                             HeightRequest="20"
+                             HorizontalOptions="End"
+                             Source="hide">
+                        <ImageButton.Triggers>
+                            <EventTrigger Event="Clicked">
+                                <local:ShowPasswordTriggerAction ShowIcon="ver"
+                                                             HideIcon="hide"
+                                                             x:Name="ShowPasswordActualTrigger"/>
+                            </EventTrigger>
+                        </ImageButton.Triggers>
+
+                    </ImageButton>
+                </Grid>
+
+                <Button Text="Iniciar sesión"
+                        BackgroundColor="Red"
+                        TextColor="White"
+                        Command="{Binding LoginCommand}"
+                        ></Button>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                   </StackLayout>
+            </StackLayout>
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

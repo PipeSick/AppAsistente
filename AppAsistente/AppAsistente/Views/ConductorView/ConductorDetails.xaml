@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppAsistente.Views.ConductorView.ConductorDetails">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Información del Conductor"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                   FontSize="Large"/>
+            <Label x:Name="Id" />
+            <Label Text="Rut:"
+                       FontSize="Medium"/>
+            <Label x:Name="LabelRut"
+                   FontSize="Medium"/>
+            <Label Text="Nombre"
+                       FontSize="Medium"/>
+            <Label x:Name="LabelNombre"
+                   FontSize="Medium"/>
+            <Label Text="Apellidos:"
+                       FontSize="Medium"/>
+            <Label x:Name="LabelApellidos"
+                   FontSize="Medium"/>
+            <Label Text="Numero de Contacto:"
+                       FontSize="Medium"/>
+            <Label x:Name="LabelContacto"
+                   FontSize="Medium"/>
+            <Button x:Name="Volver"
+                        Text="Volver al listado"
+                        Clicked="VolverBtn_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

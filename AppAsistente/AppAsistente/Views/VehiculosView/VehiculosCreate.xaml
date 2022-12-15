@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppAsistente.Views.VehiculosView.VehiculosCreate">
+    <ContentPage.Content>
+        <StackLayout x:Name="MainStak">
+            <StackLayout Padding="20" Margin="0,10,0,0" >
+                <Label Text="Agregar Vehiculo" TextColor="Black" HorizontalTextAlignment="Start" FontSize="Title"></Label>
+            </StackLayout>
+            <StackLayout Padding="20" Margin="0, 20, 0, 0">
+                <Label Text="Patente" TextColor="Red"></Label>
+                <Entry x:Name="TxtPatente"
+                           Placeholder="Ingrese la Patente Del Vehiculo"
+                       Text="{Binding PatenteTxt, Mode = TwoWay}"
+                 />
+                <Label Text="Año de Fabricación " TextColor="Red"></Label>
+                <Entry x:Name="TxtAñoFabricacion"
+                           Placeholder="Ingrese El año de Fabricación"
+                       Text="{Binding TxtAñoFabricacion, Mode = TwoWay}"
+                       />
+
+                <Label Text="Seleccione Rut del conductor" TextColor="Red"/>
+                <Picker Title="Selecciona Rut del conductor"
+                    x:Name="pickerCountry"
+                    ItemDisplayBinding="{Binding Rut}"
+                    >
+                </Picker>
+
+               
+                <Button Text="Agregar Vehiculo"
+                        BackgroundColor="Red"
+                        TextColor="White"
+                        Clicked="SaveButtonClicked"
+                        ></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

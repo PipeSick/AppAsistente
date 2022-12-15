@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="AppAsistente.Views.IndexTabbed.gpsview">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Compartir Ubicación del transporte" HorizontalTextAlignment="Center" TextColor="White" FontSize="26"/>
+            </Frame>
+
+            <maps:Map x:Name="MyMap"/>
+
+            <Grid Margin="0,5,0,0">
+                <Button x:Name="btnLocationStart" Text="Compartir Ubicación"
+                Clicked="Start_Clicked"
+                Command="{Binding StartSharedLocation}"
+                />
+                <ImageButton x:Name="IconLocationOn" VerticalOptions="Center" Margin="0,0,90,0"
+                             HeightRequest="20"
+                             HorizontalOptions="End"
+                             Source="locationon"/>
+                <Button x:Name="btnLocationStop" Text="Parar de Compartir Ubicación"
+               Clicked="Stop_Clicked"
+               IsVisible="false"
+               Command="{Binding StopSharedLocation}"/>
+                <ImageButton x:Name="IconLocationOff" VerticalOptions="Center" Margin="0,0,60,0"
+                             HeightRequest="20"
+                             HorizontalOptions="End"
+                             Source="locationoff"
+                             IsVisible="false"/>
+            </Grid>
+
+            <Label x:Name="PatenteFurgon" 
+                   IsVisible="false"/>
+        </StackLayout>
+
+
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:AppAsistente.Views.AccessView"
+             x:Class="AppAsistente.Views.UsersView.UserRegister">
+    <ContentPage.Content>
+            <StackLayout x:Name="MainStak">
+                <StackLayout Padding="20" Margin="0,10,0,0" >
+                    <Label Text="Agregar Usuario" TextColor="Black" HorizontalTextAlignment="Start" FontSize="Title"></Label>
+                </StackLayout>
+            <StackLayout Padding="20" Margin="0, 20, 0, 0">
+                <Label Text="Nombre" TextColor="Red"></Label>
+                    <Entry x:Name="TxtNombre"
+                           Placeholder="Ingrese Nombre"
+                       Text="{Binding NombreTxt, Mode = TwoWay}"
+                       />
+                <Label Text="Apellidos" TextColor="Red"></Label>
+                <Entry x:Name="TxtApellidos" Placeholder="Ingrese Apellidos"
+                       Text="{Binding ApellidosTxt, Mode = TwoWay}"
+                       />
+                <Label Text="Correo" TextColor="Red"></Label>
+                <Entry x:Name="TxtCorreo" Placeholder="Ingrese Correo"
+                       Text="{Binding CorreoTxt, Mode = TwoWay}"
+                       />
+
+                <Label Text="Contraseña"  TextColor="Red"/>
+                <Entry x:Name="TxtContraseña" Placeholder="Ingrese Contraseña"
+                           Text="{Binding PasswordTxt, Mode= TwoWay}" 
+                           IsPassword="True"
+                           />
+
+                <Label Text="Seleccione Patente del vehiculo asigado" TextColor="Red"/>
+                <Picker Title="Selecciona Patente"
+                    x:Name="pickerPatente"
+                    ItemDisplayBinding="{Binding Patente}"
+                    >
+                </Picker>
+
+                <Label Text="Seleccione rut del alumno" TextColor="Red"/>
+                <Picker Title="Selecciona Patente"
+                    x:Name="pickerAlumno"
+                    ItemDisplayBinding="{Binding RutAlu}"
+                    >
+                </Picker>
+
+                <Button Text="Agregar Usuario"
+                        BackgroundColor="Red"
+                        TextColor="White"
+                        Clicked="SaveButtonClicked"
+                        ></Button>                  
+                </StackLayout>
+            </StackLayout>
+        </ContentPage.Content>
+</ContentPage>

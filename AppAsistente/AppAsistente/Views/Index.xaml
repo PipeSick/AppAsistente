@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="AppAsistente.Views.Index">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Aplicación Asistente Furgón" HorizontalTextAlignment="Center" TextColor="White" FontSize="26"/>
+            </Frame>
+
+            <Grid Margin="0,15,0,0">
+                <Button x:Name="btnLocationStart" Text="Compartir Ubicación"
+                Clicked="Start_Clicked"
+                Command="{Binding StartSharedLocation}"
+                />
+                <ImageButton x:Name="IconLocationOn" VerticalOptions="Center" Margin="0,0,90,0"
+                             HeightRequest="20"
+                             HorizontalOptions="End"
+                             Source="locationon"/>
+                <Button x:Name="btnLocationStop" Text="Parar de Compartir Ubicación"
+               Clicked="Stop_Clicked"
+               IsVisible="false"
+               Command="{Binding StopSharedLocation}"/>
+                <ImageButton x:Name="IconLocationOff" VerticalOptions="Center" Margin="0,0,60,0"
+                             HeightRequest="20"
+                             HorizontalOptions="End"
+                             Source="locationoff"
+                             IsVisible="false"/>
+            </Grid>
+
+            <Button x:Name="GestionarUsuarios"
+                    Text="Gestionar Usuarios"
+                    Clicked="AbrirCrudUsers"
+                    />
+            <Button x:Name="GestinarVehiculos"
+                    Text="Gestionar vehiculos"
+                    Clicked="AbrirIndexVehiculos"
+                    />
+            <Button x:Name="GestionarConductores"
+                    Text="Gestionar Conductores"
+                    Clicked="AbrirIndexConductores"
+                    />
+            <Button x:Name="GestionarEstablecimientos"
+                    Text="Gestionar Establecimientos"
+                    Clicked="AbrirIndexEstablecimientos"
+                    />
+            <Button x:Name="GestionarAlumnos"
+                    Text="Gestionar Alumnos"
+                    Clicked="AbrirIndexAlumnos"
+                    />
+
+
+
+
+
+
+
+            <Label x:Name="PatenteFurgon" 
+                   IsVisible="false"/>
+            
+            
+            
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

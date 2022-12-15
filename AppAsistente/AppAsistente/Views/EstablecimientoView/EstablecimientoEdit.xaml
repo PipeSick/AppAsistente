@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppAsistente.Views.Establecimiento.EstablecimientoEdit">
+    <ContentPage.Content>
+        <StackLayout x:Name="MainStak">
+            <StackLayout Padding="20" Margin="0,10,0,0" >
+                <Label Text="Agregar Establecimiento" TextColor="Black" HorizontalTextAlignment="Start" FontSize="Title"></Label>
+            </StackLayout>
+            <StackLayout Padding="20" Margin="0, 20, 0, 0">
+                <Label Text="Nombre" TextColor="Red"></Label>
+                <Entry x:Name="TxtNombre"
+                           Placeholder="Ingrese nombre del establecimiento"
+                       Text="{Binding TxtNombre, Mode = TwoWay}"
+                 />
+                <Label Text="Dirección" TextColor="Red"></Label>
+                <Entry x:Name="TxtDireccion"
+                           Placeholder="Ingrese la dirección del establecimiento"
+                       Text="{Binding TxtDireccion, Mode = TwoWay}"
+                       />
+
+                <Label Text="Telefono:" TextColor="Red"/>
+                <Entry x:Name="TxtTelefono"
+                           Placeholder="Ingrese Telefono de Contacto"
+                       Text="{Binding TxtTelefono, Mode = TwoWay}"
+                       />
+                <Label Text="Director:" TextColor="Red"/>
+                <Entry x:Name="TxtDirector"
+                           Placeholder="Ingrese Nobmre del director"
+                       Text="{Binding TxtDirector, Mode = TwoWay}"
+                       />
+                <Label x:Name="txtid"
+                       IsVisible="false"/>
+
+                <Button Text="Editar"
+                        BackgroundColor="Red"
+                        TextColor="White"
+                        Clicked="ButtonUpdate_Clicked"
+                        ></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    
+        

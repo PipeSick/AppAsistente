@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppAsistente.Views.VehiculosView.VehiculosEdit">
+    <StackLayout Padding="15" VerticalOptions="CenterAndExpand">
+        <Label x:Name="TxtId"
+               IsVisible="False"/>
+        <Label Text="Editar Vehiculo" 
+                HorizontalOptions="Center"
+                  FontSize="Large"/>
+        <Label Text="Patente" TextColor="Red"></Label>
+        <Entry x:Name="TxtPatente"
+               Placeholder="Ingrese la Patente Del Vehiculo"                      
+                 />
+        <Label Text="Año de Fabricación " TextColor="Red"></Label>
+        <Entry x:Name="TxtAñoFabricacion"
+               Placeholder="Ingrese Nombre"/>
+        <Label Text="Seleccione Rut del conductor" TextColor="Red"/>
+        <Picker Title="Selecciona Rut del conductor"
+                    x:Name="pickerCountry"
+                    ItemDisplayBinding="{Binding Rut}"
+                    >
+        </Picker>
+
+        <Button Text="Update"
+                    x:Name="ButtonUpdate"
+                    CornerRadius="15"
+                    Clicked="ButtonUpdate_Clicked" />
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppAsistente.Views.ContainerTabbedPage"
+            xmlns:locals="clr-namespace:AppAsistente.Views.IndexTabbed"
+
+            BarBackground="#2196F3" SelectedTabColor="Black" UnselectedTabColor="White">
+  <!--Pages can be added as references or inline-->
+  <locals:gpsview Title="Ubicación" IconImageSource="icon_mapa2" />
+  <ContentPage Title="Asistencia" IconImageSource="lista2" />
+  <locals:ConfigView Title="Gestión" IconImageSource="configuraciones2"/>
+</TabbedPage>

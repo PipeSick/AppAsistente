@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppAsistente.Views.ConductorView.ConductorIndex">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Agregar"
+                     x:Name="AddToolBarItem"
+                     Clicked="AddToolBarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="ConductorViewList" 
+                  ItemsSource="{Binding conductor}"
+                  HasUnevenRows="True"                 
+                  IsRefreshing="True"
+                  IsPullToRefreshEnabled="True"
+                  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <SwipeView>
+                                <SwipeView.LeftItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="Editar" BackgroundColor="Red"
+                                                   x:Name="EditSwipeItem"
+                                                   CommandParameter="{Binding Id}"
+                                                   Invoked="EditSwipeItem_Invoked"></SwipeItem>
+                                        <SwipeItem Text="Eliminar" BackgroundColor="Red" CommandParameter="{Binding Id}"
+                                                   x:Name="DeleteSwipeItem"
+                                                   Invoked="DeleteMenuItem_Clicked"></SwipeItem>
+                                        <SwipeItem Text="Detalles" BackgroundColor="Red"
+                                                   x:Name="DetailsSwipeItem"
+                                                   CommandParameter="{Binding Id}"
+                                                   Invoked="DetailsSwipeItem_Invoked"></SwipeItem>
+                                    </SwipeItems>
+                                </SwipeView.LeftItems>
+                                <StackLayout Orientation="Horizontal" Padding="5">
+                                    <StackLayout HorizontalOptions="StartAndExpand">
+                                        <Label Text="Nombre del conductor" FontSize="Medium" HorizontalTextAlignment="Start"></Label>
+                                        <Label Text="{Binding Nombres}" FontSize="Medium"/>
+                                        <Label Text="Rut del conductor"/>
+                                        <Label Text="{Binding Rut}" />
+                                    </StackLayout>
+                                    <StackLayout VerticalOptions="Center"
+                                         HorizontalOptions="EndAndExpand">
+                                        <Image Source="edit.png"
+                                       HeightRequest="20"
+                                       WidthRequest="20">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer x:Name="EditTap" Tapped="EditTap_Tapped"
+                                                              CommandParameter="{Binding Id}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                        <Image Source="delete.png"
+                                       HeightRequest="20"
+                                       WidthRequest="20">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer x:Name="DeleteTapp" Tapped="DeleteTapp_Tapped"
+                                                              CommandParameter="{Binding Id}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                        <Image Source="ver.png"
+                                       HeightRequest="20"
+                                       WidthRequest="20">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer x:Name="InfoTapp" Tapped="DetailsTapp_Tapped"
+                                                              CommandParameter="{Binding Id}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </StackLayout>
+                                </StackLayout>
+                            </SwipeView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

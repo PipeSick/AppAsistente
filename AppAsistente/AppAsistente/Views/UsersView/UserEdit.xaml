@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppAsistente.Views.UsersView.UserEdit">
+    <ContentPage.Content>
+        <StackLayout Padding="15" VerticalOptions="CenterAndExpand">
+            <Label Text="Editar Usuario" 
+                HorizontalOptions="Center"
+                  FontSize="Large"/>           
+
+
+            <Entry x:Name="TxtId"
+                   IsVisible="false"/>
+
+            <Entry x:Name="TxtNombre"
+                   Placeholder="Ingresa tu nombre"/>
+            <Entry x:Name="TxtApellido"
+                   Placeholder="Ingresa tus apellidos"
+                  />
+            <Entry x:Name="TxtCorreo"
+                   Placeholder="Ingresa tu correo"/>
+            <Entry x:Name="TxtContraseña"
+                   Placeholder="Ingresa tu contraseña"/>
+            <Entry x:Name="TxtVehiculoId"
+                   Placeholder="Ingresa la patente del vehiculo asignado"/>
+            <Entry x:Name="TxtAlumnoRut"
+                   Placeholder="Ingresa el rut del alumno"/>
+
+            <Button Text="Update"
+                    x:Name="ButtonUpdate"
+                    CornerRadius="15"
+                    Clicked="ButtonUpdate_Clicked" />
+
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

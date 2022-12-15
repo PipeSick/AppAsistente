@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppAsistente.Views.AlumnosView.AlumnosCreate">
+    <ContentPage.Content>
+        <StackLayout Padding="15" VerticalOptions="CenterAndExpand">
+            <Label x:Name="TxtId"
+               IsVisible="False"/>
+            <Label Text="Agregar Alumno" 
+                HorizontalOptions="Center"
+                  FontSize="Large"/>
+            <Label Text="Rut" TextColor="Red"></Label>
+            <Entry x:Name="TxtRut"
+               Placeholder="Ingrese el RUT del alumno"                      
+                 />
+            <Label Text="Nombres " TextColor="Red"></Label>
+            <Entry x:Name="TxtNombres"
+               Placeholder="Ingrese Nombre del alumno"/>
+            <Label Text="Apellidos" TextColor="Red"></Label>
+            <Entry x:Name="TxtApellidos"
+               Placeholder="Ingrese Apellidos del alumno"/>
+            <Label Text="Seleccione el establecimiento" TextColor="Red"/>
+            <Picker Title="Selecciona establecimiento"
+                    x:Name="pickerEstablecimiento"
+                    ItemDisplayBinding="{Binding Nombre}"
+                    >
+            </Picker>
+
+            <Button Text="Agregar Alumno"
+                        BackgroundColor="Red"
+                        TextColor="White"
+                        Clicked="SaveButtonClicked"
+                        ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

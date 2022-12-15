@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppAsistente.Views.VehiculosView.VehiculosDetails"
+             Title="Información del vehiculo">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Información del Vehiculo"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                   FontSize="Large"/>
+                <Label x:Name="Id" />
+                <Label Text="Patente:"
+                       FontSize="Medium"/>
+                <Label x:Name="LabelPatente"
+                   FontSize="Medium"/>
+                <Label Text="Año de fabricación:"
+                       FontSize="Medium"/>
+                <Label x:Name="LabelFecha"
+                   FontSize="Medium"/>
+                <Label Text="Rut del conductor:"
+                       FontSize="Medium"/>
+                <Label x:Name="LabelConductor"
+                   FontSize="Medium"/>
+
+                <Button x:Name="Volver"
+                        Text="Volver al listado"
+                        Clicked="VolverBtn_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

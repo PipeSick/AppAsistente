@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppAsistente.Views.UsersView.UserDetails">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Información del usuario"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                   FontSize="Large"/>
+                <Label x:Name="Id" />
+                <Label x:Name="LabelNombre"
+                   FontSize="Medium"/>
+                <Label x:Name="LabelApellido"
+                   FontSize="Medium"/>
+                <Label x:Name="LabelCorreo"
+                   FontSize="Medium"/>
+                <Label x:Name="LabelContraseña"
+                   FontSize="Medium"/>
+                <Label x:Name="LabelVehiculoAsignado"
+                   FontSize="Medium"/>
+                <Label x:Name="LabelEstudianteRut"
+                   FontSize="Medium"/>
+
+                <Button Text="Volver"
+                    x:Name="Volver"
+                        Clicked="VolverBtn_Clicked"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
